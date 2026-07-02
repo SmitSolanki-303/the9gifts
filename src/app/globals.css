@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --onyx: #0A0908;
+  --gold: #D4AF37;
+  --bone: #FFFAFF;
+  
+  --background: var(--onyx);
+  --foreground: var(--bone);
+  
+  --primary: var(--gold);
+  --primary-foreground: var(--onyx);
+  
+  --secondary: var(--bone);
+  --secondary-foreground: var(--onyx);
+  
+  --muted: rgba(255, 250, 255, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-onyx: var(--onyx);
+  --color-bone: var(--bone);
+  
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-manrope);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
