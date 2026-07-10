@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Sparkles, ArrowRight, Mail, Trophy } from "lucide-react";
+import { Sparkles, ArrowRight, Mail } from "lucide-react";
 import { FaInstagram as Instagram, FaXTwitter as Twitter, FaLinkedinIn as Linkedin } from "react-icons/fa6";
 import Image from "next/image";
 import { useState } from "react";
@@ -73,21 +73,21 @@ export default function ComingSoonPage() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center justify-center flex-1 py-10 mt-[-5vh] lg:mt-0">
+      <main className="relative z-10 w-full max-w-4xl mx-auto px-6 flex flex-col items-center justify-center flex-1 py-10 mt-[-5vh] lg:mt-0">
         
-        {/* Left Column: Coming Soon */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-xl mx-auto lg:mx-0">
+        {/* Coming Soon */}
+        <div className="flex flex-col items-center text-center w-full max-w-2xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="relative mb-10 flex items-center justify-center lg:justify-start w-20 h-20 md:w-28 md:h-28 drop-shadow-[0_0_40px_rgba(212,175,55,0.25)]"
+            className="relative mb-10 flex items-center justify-center w-20 h-20 md:w-28 md:h-28 drop-shadow-[0_0_40px_rgba(212,175,55,0.25)]"
           >
             <Image
               src="/images/the9gifts-logo.png"
               alt="The 9 Gifts Logo"
               fill
-              className="object-contain brightness-125 lg:object-left"
+              className="object-contain brightness-125"
             />
             <Sparkles
               className="absolute -top-2 -right-2 md:-top-4 md:-right-4 w-4 h-4 md:w-6 md:h-6 text-gold/80 animate-pulse"
@@ -99,13 +99,12 @@ export default function ComingSoonPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="mb-6 overflow-hidden flex items-center justify-center lg:justify-start w-full"
+            className="mb-6 overflow-hidden flex items-center justify-center w-full"
           >
-            <span className="text-[10px] md:text-xs uppercase tracking-[0.6em] font-medium text-gold/80 flex items-center justify-center lg:justify-start w-full">
-              <span className="hidden lg:inline-block w-10 h-[1px] bg-gradient-to-r from-transparent to-gold/50 mr-4" />
-              <span className="inline-block lg:hidden w-8 h-[1px] bg-gradient-to-r from-transparent to-gold/50 mr-3" />
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.6em] font-medium text-gold/80 flex items-center justify-center w-full">
+              <span className="inline-block w-8 md:w-12 h-[1px] bg-gradient-to-r from-transparent to-gold/50 mr-3 md:mr-4" />
               A New Era of Gifting
-              <span className="inline-block lg:hidden w-8 h-[1px] bg-gradient-to-l from-transparent to-gold/50 ml-3" />
+              <span className="inline-block w-8 md:w-12 h-[1px] bg-gradient-to-l from-transparent to-gold/50 ml-3 md:ml-4" />
             </span>
           </motion.div>
 
@@ -135,7 +134,7 @@ export default function ComingSoonPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-full max-w-md relative mx-auto lg:mx-0"
+            className="w-full max-w-md relative mx-auto"
           >
             <div className="absolute -inset-0.5 bg-gradient-to-r from-gold/0 via-gold/30 to-gold/0 rounded-none blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
             <div className="relative backdrop-blur-sm bg-background/80 border border-gold/20 p-1">
@@ -180,92 +179,7 @@ export default function ComingSoonPage() {
           </motion.div>
         </div>
 
-        {/* Right Column: Cricket Team Marketing */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.2, delay: 0.8 }}
-          className="w-full relative mt-16 lg:mt-0 flex justify-center lg:justify-end"
-        >
-          <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-gold/10 to-transparent blur-3xl -z-10 rounded-full" />
-          
-          <a 
-            href="https://www.instagram.com/p/DaQJ87nksYc/?utm_source=ig_web_button_share_sheet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block cursor-pointer relative w-full max-w-sm border border-gold/20 bg-background/60 backdrop-blur-md p-6 md:p-8 overflow-hidden group hover:border-gold/40 transition-colors duration-500"
-          >
-            {/* Subtle glow on hover */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-            
-            {/* Sponsor Badge */}
-            <div className="flex items-center gap-4 mb-8 border-b border-gold/10 pb-6">
-              <div className="w-12 h-12 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold shrink-0">
-                <Trophy className="w-6 h-6" strokeWidth={1.5} />
-              </div>
-              <div className="text-left">
-                <div className="text-[9px] uppercase tracking-[0.3em] text-muted/60 mb-1">
-                  Title Sponsor & Owner
-                </div>
-                <div className="text-[11px] md:text-xs uppercase tracking-[0.2em] text-gold/90 font-semibold">
-                  UBN Cricket League 2.0
-                </div>
-              </div>
-            </div>
 
-            {/* Team Info */}
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-serif italic text-foreground mb-3 drop-shadow-md">
-                The9 अपराजिता
-              </h2>
-              <div className="inline-block px-4 py-1.5 border border-gold/30 bg-gold/5 text-[10px] uppercase tracking-[0.2em] text-gold mt-2">
-                Team Owner: Urvashi Parmar
-              </div>
-            </div>
-
-            {/* Roster list */}
-            <div className="space-y-3 relative z-10">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-center text-muted/50 mb-4 border-b border-gold/10 pb-2">
-                Meet Our Team
-              </div>
-              
-              <div className="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] md:text-xs tracking-widest font-light text-muted/80">
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">1</span> Avni D
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">2</span> Reena S
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">3</span> Niti A
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">4</span> Purvi S
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">5</span> Poonam S
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-gold/50 text-[10px]">6</span> Rachana N
-                </div>
-                <div className="flex items-center gap-2 col-span-2 justify-center mt-3 pt-3 border-t border-gold/10 text-gold font-medium">
-                  <span className="text-gold/50 text-[10px]">7</span> Urvashi P (Capt.)
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom CTA & Tagline */}
-            <div className="mt-8 pt-6 border-t border-gold/10 flex flex-col items-center gap-5 relative z-10">
-              <span className="text-[9px] md:text-[10px] font-medium tracking-[0.25em] uppercase text-gold/80 italic">
-                Roar For Your Team! The Game Is On!
-              </span>
-              <div className="flex items-center gap-3 px-6 py-2.5 bg-gold/5 border border-gold/20 text-gold text-[10px] uppercase tracking-[0.2em] font-medium transition-all duration-300 group-hover:bg-gold/10 group-hover:border-gold/40 shadow-[0_0_15px_rgba(212,175,55,0)] group-hover:shadow-[0_0_15px_rgba(212,175,55,0.15)]">
-                <span>View on Instagram</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
-              </div>
-            </div>
-          </a>
-        </motion.div>
       </main>
 
       {/* Footer */}
